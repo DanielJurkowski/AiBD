@@ -4,10 +4,13 @@ import pickle
 import psycopg2 as pg
 import pandas.io.sql as psql
 import pandas as pd
+from sqlalchemy import create_engine
 
 from typing import Union, List, Tuple
 
-connection = pg.connect(host='pgsql-196447.vipserv.org', port=5432, dbname='wbauer_adb', user='wbauer_adb', password='adb2020');
+db_string = "postgresql://wbauer_adb:adb2020@pgsql-196447.vipserv.org:5432/wbauer_adb"
+db = create_engine(db_string)
+connection = db.connect()
 
 def film_in_category(category_id:int)->pd.DataFrame:
     ''' Funkcja zwracająca wynik zapytania do bazy o tytuł filmu, język, oraz kategorię dla zadanego id kategorii.
@@ -126,15 +129,15 @@ def client_from_city(city:str)->pd.DataFrame:
         return None
 
     request =   f"""select 
-                    city.city, customer.first_name, customer.last_name
+                        city.city, customer.first_name, customer.last_name
                     from 
-                    city
+                        city
                     inner join 
-                    address on address.city_id = city.city_id
+                        address on address.city_id = city.city_id
                     inner join 
-                    customer on customer.address_id = address.address_id
+                        customer on customer.address_id = address.address_id
                     where 
-                    city.city = '{city}'"""
+                        city.city = '{city}'"""
 
     return pd.read_sql_query(request, con=connection)
 
@@ -157,17 +160,17 @@ def avg_amount_by_length(length:Union[int,float])->pd.DataFrame:
         return None
 
     request = f"""select 
-                    film.length, avg(payment.amount)
+                        film.length, avg(payment.amount)
                     from 
-                    film
+                        film
                     inner join 
-                    inventory on inventory.film_id = film.film_id
+                        inventory on inventory.film_id = film.film_id
                     inner join 
-                    rental on rental.inventory_id = inventory.inventory_id
+                        rental on rental.inventory_id = inventory.inventory_id
                     inner join
-                    payment on payment.rental_id = rental.rental_id
+                        payment on payment.rental_id = rental.rental_id
                     where
-                    film.length = {length}
+                        film.length = {length}
                     group by film.length"""
 
     return pd.read_sql_query(request, con=connection)
@@ -195,21 +198,21 @@ def client_by_sum_length(sum_min:Union[int,float])->pd.DataFrame:
         return None
 
     request = f"""select 
-                    customer.first_name, customer.last_name, sum(film.length) as sum
+                        customer.first_name, customer.last_name, sum(film.length) as sum
                     from 
-                    film
+                        film
                     inner join 
-                    inventory on inventory.film_id = film.film_id
+                        inventory on inventory.film_id = film.film_id
                     inner join 
-                    rental on rental.inventory_id = inventory.inventory_id
+                        rental on rental.inventory_id = inventory.inventory_id
                     inner join
-                    customer on customer.customer_id = rental.customer_id
+                        customer on customer.customer_id = rental.customer_id
                     group by 
-                    customer.first_name, customer.last_name
+                        customer.first_name, customer.last_name
                     having
-                    sum(film.length) > {sum_min}
+                        sum(film.length) > {sum_min}
                     order by
-                    sum, customer.last_name, customer.first_name"""
+                        sum, customer.last_name, customer.first_name"""
 
     return pd.read_sql_query(request, con=connection)
 
@@ -232,17 +235,17 @@ def category_statistic_length(name:str)->pd.DataFrame:
 
 
     request = f"""select 
-                    category.name as category, avg(film.length), sum(film.length), min(film.length), max(film.length)
+                        category.name as category, avg(film.length), sum(film.length), min(film.length), max(film.length)
                     from 
-                    film
+                        film
                     inner join 
-                    film_category on film_category.film_id = film.film_id
+                        film_category on film_category.film_id = film.film_id
                     inner join 
-                    category on category.category_id = film_category.category_id
+                        category on category.category_id = film_category.category_id
                     where
-                    category.name = '{name}'
+                        category.name = '{name}'
                     group by 
-                    category.name
+                        category.name
                     """
 
     return pd.read_sql_query(request, con=connection)
