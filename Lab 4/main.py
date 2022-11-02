@@ -34,38 +34,42 @@ def film_in_category(category:Union[int,str])->pd.DataFrame:
     if not isinstance(category, (int, str)):
         return None
 
-    if isinstance(category, str):
-        request = f"""select film_list.title, language.name as languge, category.name as category
-                      from film_list
-                      join 
-                      film on film_list.fid = film.film_id
-                      join 
-                      language on film.language_id = language.language_id
-                      where 
-                      film_list.category = {category}
-                      order by 
-                      film_list.title, languge"""
+    if isinstance(category, int):
+        request = f"""select 
+                        film.title, language.name as languge, category.name as category
+                        from 
+                        film
+                        inner join 
+                        language on language.language_id = film.language_id
+                        inner join 
+                        film_category on film_category.film_id = film.film_id
+                        inner join 
+                        category on category.category_id = film_category.category_id
+                        where 
+                        category.category_id = {category}
+                        order by 
+                        film.title, languge"""
 
+    elif isinstance(category, str):
+        request = f"""select 
+                        film.title, language.name as languge, category.name as category
+                        from 
+                        film
+                        inner join 
+                        language on language.language_id = film.language_id
+                        inner join 
+                        film_category on film_category.film_id = film.film_id
+                        inner join 
+                        category on category.category_id = film_category.category_id
+                        where 
+                        category.name = '{category}'
+                        order by 
+                        film.title, languge"""
     else:
-        request = f"""select film_list.title, language.name as languge, category.name as category
-                      from film_list
-                      join 
-                      film on film_list.fid = film.film_id
-                      join
-                      film_category on film.film_id = film_category.film_id
-                      join
-                      category on film_category.category_id = category.category_id
-                      join 
-                      language on film.language_id = language.language_id
-                      where 
-                      film_category.category_id = {category}
-                      order by 
-                      film_list.title, languge"""
+        return None
 
     return pd.read_sql_query(request, con=connection)
 
-
-    
 def film_in_category_case_insensitive(category:Union[int,str])->pd.DataFrame:
     ''' Funkcja zwracająca wynik zapytania do bazy o tytuł filmu, język, oraz kategorię dla zadanego:
         - id: jeżeli categry jest int
@@ -84,7 +88,44 @@ def film_in_category_case_insensitive(category:Union[int,str])->pd.DataFrame:
     Returns:
     pd.DataFrame: DataFrame zawierający wyniki zapytania
     '''
-    return None
+    if not isinstance(category, (int, str)):
+        return None
+
+    if isinstance(category, int):
+        request = f"""select 
+                        film.title, language.name as languge, category.name as category
+                        from 
+                        film
+                        inner join 
+                        language on language.language_id = film.language_id
+                        inner join 
+                        film_category on film_category.film_id = film.film_id
+                        inner join 
+                        category on category.category_id = film_category.category_id
+                        where 
+                        category.category_id = {category}
+                        order by 
+                        film.title, languge"""
+
+    elif isinstance(category, str):
+        request = f"""select 
+                        film.title, language.name as languge, category.name as category
+                        from 
+                        film
+                        inner join 
+                        language on language.language_id = film.language_id
+                        inner join 
+                        film_category on film_category.film_id = film.film_id
+                        inner join 
+                        category on category.category_id = film_category.category_id
+                        where 
+                        category.name ilike '{category}'
+                        order by 
+                        film.title, languge"""
+    else:
+        return None
+
+    return pd.read_sql_query(request, con=connection)
     
 def film_cast(title:str)->pd.DataFrame:
     ''' Funkcja zwracająca wynik zapytania do bazy o obsadę filmu o dokładnie zadanym tytule.
@@ -101,8 +142,22 @@ def film_cast(title:str)->pd.DataFrame:
     Returns:
     pd.DataFrame: DataFrame zawierający wyniki zapytania
     '''
-    return None
-    
+    if not isinstance(title, str):
+        return None
+
+    request = f"""select actor.first_name, actor.last_name
+                from actor
+                inner join
+                film_actor on film_actor.actor_id = actor.actor_id
+                inner join
+                film on film.film_id = film_actor.film_id
+                where
+                film.title = '{title}'
+                order by
+                actor.last_name, actor.first_name
+                """
+
+    return pd.read_sql_query(request, con=connection)
 
 def film_title_case_insensitive(words:list) :
     ''' Funkcja zwracająca wynik zapytania do bazy o tytuły filmów zawierających conajmniej jedno z podanych słów z listy words.
@@ -120,4 +175,16 @@ def film_title_case_insensitive(words:list) :
     Returns:
     pd.DataFrame: DataFrame zawierający wyniki zapytania
     '''
-    return None
+    if not isinstance(words, list):
+        return None
+
+    string = '|'.join(words)
+    request = f"""select title
+                    from 
+                    film
+                    where 
+                    title ~* '(?:^| )({string})(?:$| )'
+                    order by 
+                    title"""
+
+    return pd.read_sql_query(request, con=connection)
