@@ -7,11 +7,7 @@ import pandas as pd
 
 from typing import Union, List, Tuple
 
-from sqlalchemy import create_engine
-
-db_string = "postgresql://wbauer_adb:adb2020@pgsql-196447.vipserv.org:5432/wbauer_adb"
-db = create_engine(db_string)
-connection = db.connect()
+connection = pg.connect(host='pgsql-196447.vipserv.org', port=5432, dbname='wbauer_adb', user='wbauer_adb', password='adb2020')
 
 def film_in_category(category:Union[int,str])->pd.DataFrame:
     ''' Funkcja zwracająca wynik zapytania do bazy o tytuł filmu, język, oraz kategorię dla zadanego:
