@@ -1,0 +1,17 @@
+Age,What is your gender?,"Have you or anyone in your household taken any precautions for an earthquake (packed an earthquake survival kit, prepared an evacuation plan, etc.)?",Count
+18 - 29,Female,Yes,15
+18 - 29,Female,No,94
+18 - 29,Male,Yes,20
+18 - 29,Male,No,86
+30 - 44,Female,Yes,21
+30 - 44,Female,No,110
+30 - 44,Male,Yes,26
+30 - 44,Male,No,100
+45 - 59,Female,Yes,27
+45 - 59,Female,No,114
+45 - 59,Male,Yes,41
+45 - 59,Male,No,93
+60,Female,Yes,37
+60,Female,No,103
+60,Male,Yes,30
+60,Male,No,84

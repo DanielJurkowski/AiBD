@@ -1,0 +1,25 @@
+Age,What is your gender?,Have you ever experienced an earthquake?,Count
+18 - 29,Female,"Yes, one or more major ones",6
+18 - 29,Female,No,51
+18 - 29,Female,"Yes, one or more minor ones",52
+18 - 29,Male,"Yes, one or more major ones",7
+18 - 29,Male,No,48
+18 - 29,Male,"Yes, one or more minor ones",51
+30 - 44,Female,"Yes, one or more major ones",17
+30 - 44,Female,No,55
+30 - 44,Female,"Yes, one or more minor ones",59
+30 - 44,Male,"Yes, one or more major ones",18
+30 - 44,Male,No,38
+30 - 44,Male,"Yes, one or more minor ones",70
+45 - 59,Female,"Yes, one or more major ones",23
+45 - 59,Female,No,58
+45 - 59,Female,"Yes, one or more minor ones",60
+45 - 59,Male,"Yes, one or more major ones",28
+45 - 59,Male,No,37
+45 - 59,Male,"Yes, one or more minor ones",69
+60,Female,"Yes, one or more major ones",31
+60,Female,No,41
+60,Female,"Yes, one or more minor ones",68
+60,Male,No,30
+60,Male,"Yes, one or more major ones",32
+60,Male,"Yes, one or more minor ones",52

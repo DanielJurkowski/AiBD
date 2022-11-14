@@ -1,0 +1,27 @@
+US Region,Have you ever experienced an earthquake?,Count
+East North Central,"Yes, one or more major ones",3
+East North Central,No,61
+East North Central,"Yes, one or more minor ones",76
+East South Central,No,20
+East South Central,"Yes, one or more minor ones",20
+Middle Atlantic,"Yes, one or more major ones",8
+Middle Atlantic,No,48
+Middle Atlantic,"Yes, one or more minor ones",81
+Mountain,No,16
+Mountain,"Yes, one or more major ones",22
+Mountain,"Yes, one or more minor ones",29
+New England,"Yes, one or more major ones",3
+New England,"Yes, one or more minor ones",26
+New England,No,34
+Pacific,No,19
+Pacific,"Yes, one or more major ones",93
+Pacific,"Yes, one or more minor ones",94
+South Atlantic,"Yes, one or more major ones",10
+South Atlantic,No,60
+South Atlantic,"Yes, one or more minor ones",85
+West North Central,"Yes, one or more major ones",4
+West North Central,"Yes, one or more minor ones",20
+West North Central,No,47
+West South Central,"Yes, one or more major ones",13
+West South Central,"Yes, one or more minor ones",40
+West South Central,No,46

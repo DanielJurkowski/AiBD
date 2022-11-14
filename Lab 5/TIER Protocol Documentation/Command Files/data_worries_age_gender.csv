@@ -1,0 +1,41 @@
+Age,What is your gender?,"In general, how worried are you about earthquakes?",Count
+18 - 29,Female,Very worried,7
+18 - 29,Female,Extremely worried,9
+18 - 29,Female,Somewhat worried,26
+18 - 29,Female,Not so worried,32
+18 - 29,Female,Not at all worried,35
+18 - 29,Male,Very worried,7
+18 - 29,Male,Extremely worried,8
+18 - 29,Male,Somewhat worried,22
+18 - 29,Male,Not so worried,32
+18 - 29,Male,Not at all worried,37
+30 - 44,Female,Very worried,4
+30 - 44,Female,Extremely worried,8
+30 - 44,Female,Somewhat worried,33
+30 - 44,Female,Not so worried,37
+30 - 44,Female,Not at all worried,49
+30 - 44,Male,Very worried,7
+30 - 44,Male,Extremely worried,10
+30 - 44,Male,Not so worried,29
+30 - 44,Male,Somewhat worried,29
+30 - 44,Male,Not at all worried,51
+45 - 59,Female,Extremely worried,5
+45 - 59,Female,Very worried,8
+45 - 59,Female,Somewhat worried,31
+45 - 59,Female,Not at all worried,46
+45 - 59,Female,Not so worried,51
+45 - 59,Male,Extremely worried,4
+45 - 59,Male,Very worried,5
+45 - 59,Male,Somewhat worried,27
+45 - 59,Male,Not at all worried,49
+45 - 59,Male,Not so worried,49
+60,Female,Extremely worried,4
+60,Female,Very worried,9
+60,Female,Not at all worried,31
+60,Female,Somewhat worried,32
+60,Female,Not so worried,64
+60,Male,Extremely worried,3
+60,Male,Very worried,4
+60,Male,Somewhat worried,18
+60,Male,Not so worried,33
+60,Male,Not at all worried,56

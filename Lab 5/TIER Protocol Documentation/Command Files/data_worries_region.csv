@@ -1,0 +1,45 @@
+US Region,"In general, how worried are you about earthquakes?",Count
+East North Central,Very worried,3
+East North Central,Extremely worried,8
+East North Central,Somewhat worried,16
+East North Central,Not so worried,49
+East North Central,Not at all worried,64
+East South Central,Extremely worried,1
+East South Central,Somewhat worried,10
+East South Central,Not so worried,13
+East South Central,Not at all worried,16
+Middle Atlantic,Very worried,3
+Middle Atlantic,Extremely worried,6
+Middle Atlantic,Somewhat worried,22
+Middle Atlantic,Not so worried,46
+Middle Atlantic,Not at all worried,60
+Mountain,Very worried,1
+Mountain,Extremely worried,5
+Mountain,Somewhat worried,15
+Mountain,Not so worried,20
+Mountain,Not at all worried,26
+New England,Extremely worried,3
+New England,Very worried,3
+New England,Somewhat worried,7
+New England,Not at all worried,21
+New England,Not so worried,29
+Pacific,Extremely worried,9
+Pacific,Not at all worried,26
+Pacific,Very worried,28
+Pacific,Not so worried,60
+Pacific,Somewhat worried,83
+South Atlantic,Very worried,4
+South Atlantic,Extremely worried,6
+South Atlantic,Somewhat worried,27
+South Atlantic,Not at all worried,57
+South Atlantic,Not so worried,61
+West North Central,Extremely worried,3
+West North Central,Very worried,4
+West North Central,Somewhat worried,13
+West North Central,Not so worried,14
+West North Central,Not at all worried,37
+West South Central,Very worried,2
+West South Central,Extremely worried,6
+West South Central,Somewhat worried,19
+West South Central,Not so worried,28
+West South Central,Not at all worried,44

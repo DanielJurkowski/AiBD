@@ -1,0 +1,41 @@
+Age,What is your gender?,How familiar are you with the Yellowstone Supervolcano?,Count
+18 - 29,Female,Extremely familiar,3
+18 - 29,Female,Very familiar,11
+18 - 29,Female,Not so familiar,28
+18 - 29,Female,Not at all familiar,33
+18 - 29,Female,Somewhat familiar,34
+18 - 29,Male,Extremely familiar,12
+18 - 29,Male,Not so familiar,15
+18 - 29,Male,Very familiar,21
+18 - 29,Male,Not at all familiar,24
+18 - 29,Male,Somewhat familiar,34
+30 - 44,Female,Extremely familiar,10
+30 - 44,Female,Very familiar,12
+30 - 44,Female,Somewhat familiar,35
+30 - 44,Female,Not so familiar,36
+30 - 44,Female,Not at all familiar,38
+30 - 44,Male,Extremely familiar,16
+30 - 44,Male,Not at all familiar,21
+30 - 44,Male,Not so familiar,23
+30 - 44,Male,Very familiar,24
+30 - 44,Male,Somewhat familiar,42
+45 - 59,Female,Extremely familiar,5
+45 - 59,Female,Very familiar,15
+45 - 59,Female,Somewhat familiar,29
+45 - 59,Female,Not so familiar,39
+45 - 59,Female,Not at all familiar,53
+45 - 59,Male,Extremely familiar,16
+45 - 59,Male,Not so familiar,21
+45 - 59,Male,Very familiar,26
+45 - 59,Male,Not at all familiar,27
+45 - 59,Male,Somewhat familiar,44
+60,Female,Very familiar,10
+60,Female,Extremely familiar,17
+60,Female,Somewhat familiar,32
+60,Female,Not so familiar,34
+60,Female,Not at all familiar,47
+60,Male,Extremely familiar,14
+60,Male,Very familiar,20
+60,Male,Not so familiar,23
+60,Male,Not at all familiar,27
+60,Male,Somewhat familiar,30

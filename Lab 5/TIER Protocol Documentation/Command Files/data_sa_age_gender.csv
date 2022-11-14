@@ -1,0 +1,41 @@
+Age,What is your gender?,How familiar are you with the San Andreas Fault line?,Count
+18 - 29,Female,Extremely familiar,5
+18 - 29,Female,Very familiar,16
+18 - 29,Female,Not so familiar,20
+18 - 29,Female,Not at all familiar,24
+18 - 29,Female,Somewhat familiar,44
+18 - 29,Male,Extremely familiar,9
+18 - 29,Male,Not so familiar,10
+18 - 29,Male,Not at all familiar,19
+18 - 29,Male,Very familiar,24
+18 - 29,Male,Somewhat familiar,44
+30 - 44,Female,Extremely familiar,15
+30 - 44,Female,Not at all familiar,15
+30 - 44,Female,Not so familiar,18
+30 - 44,Female,Very familiar,25
+30 - 44,Female,Somewhat familiar,58
+30 - 44,Male,Not at all familiar,8
+30 - 44,Male,Not so familiar,15
+30 - 44,Male,Extremely familiar,22
+30 - 44,Male,Very familiar,38
+30 - 44,Male,Somewhat familiar,43
+45 - 59,Female,Extremely familiar,13
+45 - 59,Female,Not at all familiar,18
+45 - 59,Female,Not so familiar,25
+45 - 59,Female,Very familiar,25
+45 - 59,Female,Somewhat familiar,60
+45 - 59,Male,Not at all familiar,7
+45 - 59,Male,Not so familiar,10
+45 - 59,Male,Extremely familiar,21
+45 - 59,Male,Somewhat familiar,45
+45 - 59,Male,Very familiar,51
+60,Female,Not at all familiar,9
+60,Female,Not so familiar,12
+60,Female,Extremely familiar,27
+60,Female,Very familiar,33
+60,Female,Somewhat familiar,59
+60,Male,Not so familiar,4
+60,Male,Not at all familiar,6
+60,Male,Extremely familiar,21
+60,Male,Very familiar,39
+60,Male,Somewhat familiar,44

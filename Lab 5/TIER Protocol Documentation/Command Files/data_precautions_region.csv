@@ -1,0 +1,19 @@
+US Region,"Have you or anyone in your household taken any precautions for an earthquake (packed an earthquake survival kit, prepared an evacuation plan, etc.)?",Count
+East North Central,Yes,12
+East North Central,No,128
+East South Central,Yes,9
+East South Central,No,31
+Middle Atlantic,Yes,11
+Middle Atlantic,No,126
+Mountain,Yes,22
+Mountain,No,45
+New England,Yes,3
+New England,No,60
+Pacific,No,94
+Pacific,Yes,112
+South Atlantic,Yes,22
+South Atlantic,No,133
+West North Central,Yes,7
+West North Central,No,64
+West South Central,Yes,14
+West South Central,No,85
