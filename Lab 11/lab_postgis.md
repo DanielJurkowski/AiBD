@@ -145,23 +145,23 @@ zapytania SQL oraz otrzymane wyniki do danych pytań.
 
 1. Ile rekordów znajduje się w tabeli nyc_streets?
 
-![Wykonanie zadania](./zadania/1.PNG)
+![Wykonanie zadania](./zadania/1.png)
 2. Ile ulic w Nowym Jorku ma nazwy zaczynające się na „B”, „Q” i „M”?
 
-![Wykonanie zadania](./zadania/2.PNG)
-![Wykonanie zadania](./zadania/3.PNG)
-![Wykonanie zadania](./zadania/4.PNG)
+![Wykonanie zadania](./zadania/2.png)
+![Wykonanie zadania](./zadania/3.png)
+![Wykonanie zadania](./zadania/4.png)
 3. Jaka jest populacja miasta Nowy Jork?
 
-![Wykonanie zadania](./zadania/5.PNG)
+![Wykonanie zadania](./zadania/5.png)
 4. Jaka jest populacja Bronxu, Manhattanu i Queens?
 
-![Wykonanie zadania](./zadania/6.PNG)
-![Wykonanie zadania](./zadania/7.PNG)
-![Wykonanie zadania](./zadania/8.PNG)
+![Wykonanie zadania](./zadania/6.png)
+![Wykonanie zadania](./zadania/7.png)
+![Wykonanie zadania](./zadania/8.png)
 5. Ile dzielnic ("neighborhoods") znajduje się w każdej gminie (borough)?
 
-![Wykonanie zadania](./zadania/9.PNG)
+![Wykonanie zadania](./zadania/9.png)
 
 # Materiały uzupełniające
 1. [PostGIS workshops](https://postgis.net/workshops/postgis-intro/index.html)
